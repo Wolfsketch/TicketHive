@@ -1,13 +1,9 @@
 import React from "react";
 import { Platform, Text, View, StyleSheet } from "react-native";
 
-let MapView: any = null;
-let Marker: any = null;
-
+let MapView: any;
 if (Platform.OS !== "web") {
-  const Maps = require("react-native-maps");
-  MapView = Maps.default;
-  Marker = Maps.Marker;
+  MapView = require("react-native-maps").default;
 }
 
 export default function MapScreen() {
@@ -29,13 +25,7 @@ export default function MapScreen() {
           latitudeDelta: 0.1,
           longitudeDelta: 0.1,
         }}
-      >
-        <Marker
-          coordinate={{ latitude: 50.8503, longitude: 4.3517 }}
-          title="Voorbeeld Event"
-          description="Klik hier voor meer info"
-        />
-      </MapView>
+      />
     </View>
   );
 }
