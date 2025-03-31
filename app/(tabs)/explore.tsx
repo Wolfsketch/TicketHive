@@ -7,7 +7,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 
-import MapScreen from "../map";
+import MapScreen from "@/components/MapScreen";
 
 export default function TabTwoScreen() {
   return (
